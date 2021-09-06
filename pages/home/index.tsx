@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 import { NextPage } from "next";
 import { Container } from "@material-ui/core";
 
@@ -30,14 +30,7 @@ const Home: NextPage<IHomePage.IProps, IHomePage.InitialProps> = ({
     );
 };
 
-Home.getInitialProps = async (
-    ctx: ReduxNextPageContext
-): Promise<IHomePage.InitialProps> => {
-    await ctx.store.dispatch(
-        HomeActions.GetApod({
-            params: { hd: true },
-        })
-    );
+export function getIntialProps(ctx: ReduxNextPageContext) {
     return { namespacesRequired: ["common"] };
 };
 

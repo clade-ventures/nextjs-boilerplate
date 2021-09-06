@@ -9,9 +9,6 @@ import theme from "@Definitions/Theme";
 import { appWithTranslation } from "@Server/i18n";
 import { AppWithStore } from "@Interfaces";
 import { makeStore } from "@Redux";
-
-import "@Static/css/main.scss";
-
 class WebApp extends App<AppWithStore> {
     static async getInitialProps({
         Component,
