@@ -1,0 +1,69 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@Actions": ["src/Actions"],
+      "@Atoms/*": [
+        "src/Components/Atoms/*"
+      ],
+      "@Atoms": [
+        "src/Components/Atoms"
+      ],
+      "@Molecules/*": [
+        "src/Components/Molecules/*"
+      ],
+      "@Molecules": [
+        "src/Components/Molecules"
+      ],
+      "@Organisms/*": [
+        "src/Components/Organisms/*"
+      ],
+      "@Organisms": [
+        "src/Components/Organisms"
+      ],
+      "@Definitions/*": ["src/Definitions/*"],
+      "@Definitions": ["src/Definitions"],
+      "@Interfaces": ["src/Interfaces"],
+      "@Interfaces/*": ["src/Interfaces/*"],
+      "@Pages/*": ["pages/*"],
+      "@Reducers": ["src/Redux/Reducers"],
+      "@Reducers/*": ["src/Redux/Reducers/*"],
+      "@Redux": ["src/Redux"],
+      "@Redux/*": ["src/Redux/*"],
+      "@Server/*": ["server/*"],
+      "@Services": ["src/Services"],
+      "@Services/*": ["src/Services/*"],
+      "@Static/*": ["public/static/*"],
+      "@Styled/*": ["src/Styled/*"],
+      "@Test/*": ["test/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".next",
+    "out",
+    "next.config.js",
+    ".babelrc",
+    "bundles",
+    "coverage",
+    "test/*"
+  ],
+  "types": [
+    "cypress"
+  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+}
