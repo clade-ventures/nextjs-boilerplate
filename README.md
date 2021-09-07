@@ -51,3 +51,23 @@ This project provides somes scripts:
 -   **npm run test:unit** - Running unit testing with Jest.
 -   **npm run test:e2e** - Running end to end testing with Cypress.
     <br/>
+
+## Rules
+
+### Generals
+
+-   The imported library should be pyramid sorted and also grouped by:
+    1. External library
+    2. Component
+    3. Redux
+    4. Util/Helper
+    5. Interface
+
+### Components
+
+-   Component should be writed in functional component
+-   A function in functional component should be wrapped by `useCallback` to prevent a useless instantiation
+-   A function has expensive calculation should be wrapped by `useMemo` to prevent a useless calculation
+-   Functional component should be exported with `React.memo` to prevent a useless rendering
+-   the interface should exist in a functional component to register incoming props.
+-   Every component should have snapshot testing
