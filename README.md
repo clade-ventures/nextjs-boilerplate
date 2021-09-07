@@ -1,13 +1,17 @@
 ## HZN Next JS Boilerplate (Next.JS)
 
-This structure based on [next-boilerplate](https://github.com/pankod/next-boilerplate)
+This structure based on [next-boilerplate](https://github.com/pankod/next-boilerplate).
+<br/>
 Enhancements:
 
 -   Added Material UI and removed Styled Component.
 -   Added Cypress as e2e testing framework.
 -   Added Atomic design structure (Atoms, Molecules, etc.).
 -   Removed Express JS.
+-   Moved `_app/index.tsx`, `_document/index.tsx`, `_error/index.tsx`, `404/index.tsx` from folder to `_app.tsx`
+-   Added Next JS internationalization
 -   Updated all library to latest update (Next.JS v9 to v11, storybook, redux, etc).
+-   Removed CLI Pankod
 
 ## About
 
@@ -26,7 +30,6 @@ this project provides a lot of features out of the box. Here's an overview of th
 -   **Next.js** - Minimalistic framework for server-rendered React applications.
 -   **Typescript** - Superset of JavaScript which primarily provides optional static typing, classes and interfaces.
 -   **Redux** - A predictable state container for JavaScript apps with Redux Thunk and Redux Persist.
--   **Built-in Project CLI**- Create pages, components, actions, reducers with one command by using built-in cli.
 -   **Material UI** - React components for faster and easier web development.
 -   **Docker** - A tool designed to make it easier to create, deploy, and run applications by using containers.
 -   **Babel** - The compiler for next generation JavaScript.
@@ -51,7 +54,15 @@ This project provides somes scripts:
 -   **npm run start:doc** - Running this project as component documentation.
 -   **npm run test:unit** - Running unit testing with Jest.
 -   **npm run test:e2e** - Running end to end testing with Cypress.
+-   **npm run start:analyze** - Analyzing existing bundle by bundle size visualization in the terminal.
     <br/>
+
+## Environment
+
+| Key                 | Description                                              | Example value           |
+| ------------------- | -------------------------------------------------------- | ----------------------- |
+| NEXT_PUBLIC_API_URL | API url                                                  | http://192.168.1.3:8080 |
+| BUNDLE_ANALYZE      | Determine to open bundle visualization in browser or not | true / false            |
 
 ## Rules
 
