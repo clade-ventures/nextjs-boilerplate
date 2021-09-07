@@ -1,11 +1,12 @@
-// #region Global Imports
-import * as React from "react";
-// #endregion Global Imports
+/**
+ * @jest-environment jsdom
+ */
 
-// #region Local Imports
-import { render, fireEvent } from "@Test/utils";
+import * as React from "react";
+
 import { ButtonExample } from "./index";
-// #endregion Local Imports
+
+import { render, fireEvent } from "@Test/utils";
 
 describe("Basic Components", () => {
     describe("ButtonExample", () => {

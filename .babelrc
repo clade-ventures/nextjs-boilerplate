@@ -17,7 +17,6 @@
           "@Reducers": "./src/Redux/Reducers",
           "@Redux": "./src/Redux",
           "@Services": "./src/Services",
-          "@Server": "./server",
           "@Static": "./public/static",
           "@Styled": "./src/Styled"
         }

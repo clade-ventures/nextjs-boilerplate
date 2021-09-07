@@ -6,7 +6,7 @@ import Document, {
     NextScript,
     DocumentContext,
 } from "next/document";
-import { ServerStyleSheets } from '@material-ui/core/styles';
+import { ServerStyleSheets } from "@material-ui/core/styles";
 
 class WebAppDocument extends Document {
     static async getInitialProps(ctx: DocumentContext) {
@@ -23,10 +23,12 @@ class WebAppDocument extends Document {
             const initialProps = await Document.getInitialProps(ctx);
             return {
                 ...initialProps,
-                styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()]
+                styles: [
+                    ...React.Children.toArray(initialProps.styles),
+                    sheets.getStyleElement(),
+                ],
             };
         } finally {
-
         }
     }
 

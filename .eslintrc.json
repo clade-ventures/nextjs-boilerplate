@@ -24,6 +24,6 @@
     "plugins": ["import", "jest-dom"],
     "globals": {
       "cy": true,
-      "context": true,
+      "context": true
     }
 }

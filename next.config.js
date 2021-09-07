@@ -1,6 +1,3 @@
-const withPlugins = require("next-compose-plugins");
-const withBundleAnalyzer = require("@next/bundle-analyzer");
-
 const nextConfig = {
   analyzeServer: ["server", "both"].includes(process.env.BUNDLE_ANALYZE),
   analyzeBrowser: ["browser", "both"].includes(process.env.BUNDLE_ANALYZE),
@@ -16,4 +13,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withPlugins([[withBundleAnalyzer]], nextConfig);
+module.exports = nextConfig;

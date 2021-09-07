@@ -15,7 +15,7 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@Actions": ["src/Actions"],
+      "@Actions": ["src/Redux/Actions"],
       "@Atoms/*": [
         "src/Components/Atoms/*"
       ],
@@ -43,7 +43,6 @@
       "@Reducers/*": ["src/Redux/Reducers/*"],
       "@Redux": ["src/Redux"],
       "@Redux/*": ["src/Redux/*"],
-      "@Server/*": ["server/*"],
       "@Services": ["src/Services"],
       "@Services/*": ["src/Services/*"],
       "@Static/*": ["public/static/*"],
@@ -65,5 +64,5 @@
   "types": [
     "cypress"
   ],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "./node_modules/redux-persist/types"]
 }

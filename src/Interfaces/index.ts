@@ -5,6 +5,8 @@ export * from "@Interfaces/Pages/Error";
 export * from "@Interfaces/Pages/Test";
 // #endregion Page Interfaces
 
+export * from "@Interfaces/Modules/Counter";
+
 // #region Redux Interfaces
 export * from "@Redux/IAction";
 export * from "@Redux/IStore";

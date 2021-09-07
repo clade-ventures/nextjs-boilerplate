@@ -1,6 +1,5 @@
 // #region Global Imports
 import "isomorphic-unfetch";
-import { stringify } from "query-string";
 // #endregion Global Imports
 
 // #region Interface Imports
@@ -17,7 +16,7 @@ export const Http = {
     ): Promise<A> => {
         return new Promise((resolve, reject) => {
             const query = params
-                ? `?${stringify({
+                ? `?${JSON.stringify({
                       ...params,
                       api_key: process.env.NEXT_PUBLIC_API_KEY,
                   })}`

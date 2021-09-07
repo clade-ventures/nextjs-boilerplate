@@ -1,10 +1,7 @@
 import * as React from "react";
 import { NextPage } from "next";
 
-import { withTranslation } from "@Server/i18n";
-
 import { IErrorPage } from "@Interfaces";
-
 
 const Error: NextPage<IErrorPage.IProps, IErrorPage.InitialProps> = ({
     t,
@@ -33,4 +30,4 @@ Error.getInitialProps = async ({ res, err }) => {
     };
 };
 
-export default withTranslation("common")(Error);
+export default Error;

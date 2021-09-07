@@ -1,11 +1,7 @@
-// #region Global Imports
 import { combineReducers } from "redux";
-// #endregion Global Imports
 
-// #region Local Imports
-import { HomeReducer } from "./home";
-// #endregion Local Imports
+import { CounterReducer } from "./Counter";
 
 export default combineReducers({
-    home: HomeReducer,
+    counter: CounterReducer,
 });

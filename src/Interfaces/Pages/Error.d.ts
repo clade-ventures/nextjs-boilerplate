@@ -8,7 +8,7 @@ declare namespace IErrorPage {
     }
 
     export interface InitialProps {
-        namespacesRequired: string[];
+        namespacesRequired?: string[];
     }
 }
 
