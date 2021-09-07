@@ -62,6 +62,18 @@ This project provides somes scripts:
 -   **npm run start:analyze** - Analyzing existing bundle by bundle size visualization in the terminal.
     <br/>
 
+Recommended Visual Studio Extensions:
+
+-   Jest
+-   Jest Snippets
+-   GitLens - Git supercharge
+-   Prettier
+-   JavaScript (ES6) code snippets
+-   JavaScript and Typescript Nightly
+-   ESLint
+-   One Dar Pro (theme)
+-   Material Icon Theme
+
 ## Environment
 
 | Key                 | Description                                              | Example value           |
