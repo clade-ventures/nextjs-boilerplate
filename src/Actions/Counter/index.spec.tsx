@@ -1,17 +1,23 @@
-// #region Global Imports
 import configureMockStore from "redux-mock-store";
 import thunk from "redux-thunk";
-// #endregion Global Imports
+import { expect } from "@jest/globals";
 
-// #region Local Imports
-import { ActionConsts } from "@Definitions";
-// #endregion Local Imports
+import { CounterActions } from ".";
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
 describe("Counter action tests", () => {
-    test("Counter test", async () => {
+    test("Increment test actions", async () => {
+        const store = mockStore({});
+        const expectedActions = [
+            {
+                payload: null,
+                type: "Counter_IncrementReducer",
+            },
+        ];
 
+        store.dispatch(CounterActions.Increment());
+        expect(store.getActions()).toEqual(expectedActions);
     });
 });

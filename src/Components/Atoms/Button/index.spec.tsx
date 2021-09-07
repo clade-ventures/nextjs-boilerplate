@@ -3,6 +3,7 @@
  */
 
 import * as React from "react";
+import { expect } from "@jest/globals";
 
 import { ButtonExample } from ".";
 

@@ -22,7 +22,11 @@ export const CounterReducer = (
                 ...state,
                 countNumber: state.countNumber + 1,
             };
-
+        case ActionConsts.Counter.ResetIncrementReducer:
+            return {
+                ...state,
+                ...INITIAL_STATE,
+            };
         default:
             return state;
     }

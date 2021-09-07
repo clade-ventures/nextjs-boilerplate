@@ -1,24 +1,20 @@
-// #region Global Imports
 import "isomorphic-unfetch";
-// #endregion Global Imports
 
-// #region Interface Imports
 import { HttpModel } from "@Interfaces";
-// #endregion Interface Imports
 
-const BaseUrl = `${process.env.NEXT_PUBLIC_API_URL}/api`;
+const BaseUrl = `${process.env.NEXT_PUBLIC_API_URL}`;
 export const Http = {
     Request: async <A>(
-        methodType: string,
+        methodType: "GET" | "POST" | "PUT" | "PATCH" | "DELETE",
         url: string,
         params?: HttpModel.IRequestQueryPayload,
         payload?: HttpModel.IRequestPayload
     ): Promise<A> => {
         return new Promise((resolve, reject) => {
+            const token = "";
             const query = params
                 ? `?${JSON.stringify({
                       ...params,
-                      api_key: process.env.NEXT_PUBLIC_API_KEY,
                   })}`
                 : "";
 
@@ -27,6 +23,7 @@ export const Http = {
                 cache: "no-cache",
                 headers: {
                     "content-type": "application/json",
+                    ...(token ? { Authorization: `Bearer ${token}` } : {}),
                 },
                 method: `${methodType}`,
             })

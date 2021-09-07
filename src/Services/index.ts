@@ -1,4 +1,4 @@
 // #region Local Imports
 export { Http } from "@Services/API/Http";
-export { PlanetaryService } from "@Services/API/Planetary";
+export { AuthService } from "@Services/API/Auth";
 // #endregion Local Imports
