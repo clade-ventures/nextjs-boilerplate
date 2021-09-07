@@ -9,8 +9,12 @@ Enhancements:
 -   Added Atomic design structure (Atoms, Molecules, etc.).
 -   Added Next JS internationalization.
 -   Added Redux Persist.
+-   Added Modules in Interfaces directory `Interfaces/Modules`.
+-   Added Internationalization config by NextJS Internationalization and `next-i18next`, currently support [en, id]. example `http://localhost/id` or `http://localhost/en`. The default value is en.
 -   Moved `_app/index.tsx`, `_document/index.tsx`, `_error/index.tsx`, `404/index.tsx` from folder to `_app.tsx`.
 -   Updated all library to latest update (Next.JS v9 to v11, storybook, redux, etc).
+-   Updated definition structure in service layer from multiple definition to single definition, example: `Auth.d.ts`.
+-   Updated bundle analyzer setup to the latest way.
 -   Removed Express JS.
 -   Removed CLI Pankod.
 
@@ -64,6 +68,16 @@ This project provides somes scripts:
 | ------------------- | -------------------------------------------------------- | ----------------------- |
 | NEXT_PUBLIC_API_URL | API url                                                  | http://192.168.1.3:8080 |
 | BUNDLE_ANALYZE      | Determine to open bundle visualization in browser or not | true / false            |
+
+## Folder Structure
+
+| Folder             | Description                    |
+| ------------------ | ------------------------------ |
+| .storybook         | Storybook configuration        |
+| coverage           | Jest coverage result           |
+| cypress            | End to end testing folder      |
+| test/jest.setup.ts | Jest setup before the test run |
+| ...                | ...                            |
 
 ## Rules
 
