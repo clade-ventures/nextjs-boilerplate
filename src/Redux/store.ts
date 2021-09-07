@@ -24,7 +24,6 @@ const bindMiddleware = (middleware: any) => {
 
 const makeStore = () => {
     const isServer = typeof window === "undefined";
-    console.log("isServer : ", isServer);
 
     if (isServer) {
         //If it's on server side, create a store
