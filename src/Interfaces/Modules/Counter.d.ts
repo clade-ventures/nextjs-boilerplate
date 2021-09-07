@@ -1,9 +1,8 @@
-
 declare namespace ICounter {
-    export interface IProps { }
+    export interface IProps {}
 
     export interface IStateProps {
-        countNumber: number
+        countNumber: number;
     }
 
     namespace Actions {

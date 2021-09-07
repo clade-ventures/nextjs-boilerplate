@@ -3,7 +3,7 @@ import { NextPage } from "next";
 
 import { IErrorPage } from "@Interfaces";
 
-const Custom404: NextPage<IErrorPage.IProps> = ({ t }) => {
+const Custom404: NextPage<IErrorPage.IProps> = () => {
     return <div>Page Not Found</div>;
 };
 

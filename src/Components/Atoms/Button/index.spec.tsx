@@ -4,7 +4,7 @@
 
 import * as React from "react";
 
-import { ButtonExample } from "./index";
+import { ButtonExample } from ".";
 
 import { render, fireEvent } from "@Test/utils";
 
@@ -28,7 +28,10 @@ describe("Basic Components", () => {
                 </ButtonExample>
             );
 
-            fireEvent.click(getByText("ButtonExample"), new MouseEvent("click"));
+            fireEvent.click(
+                getByText("ButtonExample"),
+                new MouseEvent("click")
+            );
 
             expect(number).toBe(2);
         });

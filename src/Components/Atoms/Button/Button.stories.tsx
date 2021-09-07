@@ -1,24 +1,22 @@
 import React from "react";
 
-import { ButtonExample } from "./index";
+import { ButtonExample } from ".";
 import IButton from "./Button.interface";
 
-export default {
+const story = {
     component: ButtonExample,
     title: "Button",
     argTypes: {
-        children: { control: 'text',  },
+        children: { control: "text" },
     },
     args: {
-        children: 'Welcome!',
-    }
+        children: "Welcome!",
+    },
 };
 
-
+export default story;
 export const Default = (props: IButton) => (
     <>
-        <ButtonExample {...props}>
-            {props.children}
-        </ButtonExample>
+        <ButtonExample {...props}>{props.children}</ButtonExample>
     </>
 );

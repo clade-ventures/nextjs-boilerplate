@@ -15,7 +15,10 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@Actions": ["src/Redux/Actions"],
+      "@Actions": ["src/Actions"],
+      "@Actions/*": [
+        "src/Actions/*"
+      ],
       "@Atoms/*": [
         "src/Components/Atoms/*"
       ],

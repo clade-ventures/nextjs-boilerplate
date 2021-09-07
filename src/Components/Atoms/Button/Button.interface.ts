@@ -1,8 +1,3 @@
-import Button, { ButtonProps } from '@material-ui/core/Button';
+import { ButtonProps } from "@material-ui/core/Button";
 
-export default interface IButton extends ButtonProps {
-    
-}
-
-
-
+export default interface IButton extends ButtonProps {}

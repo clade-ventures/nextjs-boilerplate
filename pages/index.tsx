@@ -11,7 +11,7 @@ const Home = () => {
     const counter = useSelector((state: any) => state.counter?.countNumber);
     const onWelcome = useCallback(() => {
         dispatch(CounterActions.Increment());
-    }, []);
+    }, [dispatch]);
 
     return (
         <Container>
