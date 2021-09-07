@@ -7,11 +7,12 @@ Enhancements:
 -   Added Material UI and removed Styled Component.
 -   Added Cypress as e2e testing framework.
 -   Added Atomic design structure (Atoms, Molecules, etc.).
--   Removed Express JS.
--   Moved `_app/index.tsx`, `_document/index.tsx`, `_error/index.tsx`, `404/index.tsx` from folder to `_app.tsx`
--   Added Next JS internationalization
+-   Added Next JS internationalization.
+-   Added Redux Persist.
+-   Moved `_app/index.tsx`, `_document/index.tsx`, `_error/index.tsx`, `404/index.tsx` from folder to `_app.tsx`.
 -   Updated all library to latest update (Next.JS v9 to v11, storybook, redux, etc).
--   Removed CLI Pankod
+-   Removed Express JS.
+-   Removed CLI Pankod.
 
 ## About
 
