@@ -67,5 +67,13 @@
   "types": [
     "cypress"
   ],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "./node_modules/redux-persist/types"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "./node_modules/redux-persist/types",
+    "cypress/**/*.js",
+    "jest.config.js",
+    "next.config.js",
+  ]
 }

@@ -56,5 +56,10 @@
         "tsconfig.json"
       ],
       "sourceType": "module"
-    }
+    },
+    "ignorePatterns": [
+      "next.config.js",
+      "jest.config.js",
+      "next-i18next.config.js",
+    ]
 }

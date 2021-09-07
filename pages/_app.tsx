@@ -1,4 +1,5 @@
 import * as React from "react";
+import { appWithTranslation } from "next-i18next";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from "@material-ui/core/styles";
 
@@ -14,4 +15,4 @@ const App = ({ Component, pageProps }: any) => {
     );
 };
 
-export default wrapper.withRedux(App);
+export default wrapper.withRedux(appWithTranslation(App));

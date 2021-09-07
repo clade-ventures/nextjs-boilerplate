@@ -46,8 +46,9 @@ Run this script `npm install` or `yarn install` and then to run this project `np
 
 This project provides somes scripts:
 
--   **npm run start:dev** - Running this project in development environment.
 -   **npm run start** - Running this project in production environment.
+-   **npm run start:dev** - Running this project in development environment.
+-   **npm run start:doc** - Running this project as component documentation.
 -   **npm run test:unit** - Running unit testing with Jest.
 -   **npm run test:e2e** - Running end to end testing with Cypress.
     <br/>
