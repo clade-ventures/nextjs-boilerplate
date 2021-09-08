@@ -4,6 +4,7 @@ exports[`ButtonExample should match snapshot 1`] = `
 <div>
   <button
     class="MuiButtonBase-root MuiButton-root MuiButton-text"
+    data-testid="button-example"
     tabindex="0"
     type="button"
   >
