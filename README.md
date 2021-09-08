@@ -1,4 +1,23 @@
-## HZN Next JS Boilerplate (Next.JS)
+<p align="center">
+  <a href="https://nextjs.org">
+    <img src="https://assets.vercel.com/image/upload/v1607554385/repositories/next-js/next-logo.png" height="128">
+    <h1 align="center">HZN Next.JS Boilerplate</h1>
+  </a>
+</p>
+
+<p align="center">
+  <a aria-label="Next version" href="https://www.npmjs.com/package/next">
+    <img alt="" src="https://img.shields.io/badge/Next%20Version-v11.1.2-brightgreen">
+  </a>
+  <a aria-label="Dev Dependencies: up to date" href="#">
+    <img alt="" src="https://img.shields.io/badge/devDependencies-up%20to%20date-brightgreen">
+  </a>
+  <a aria-label="Dependencies: up to date" href="#">
+    <img alt="" src="https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen">
+  </a>
+</p>
+
+## HZN Next JS Boilerplate
 
 This structure based on [next-boilerplate](https://github.com/pankod/next-boilerplate).
 <br/>
