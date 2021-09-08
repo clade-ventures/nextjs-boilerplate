@@ -1,8 +1,6 @@
 <p align="center">
-  <a href="https://nextjs.org">
     <img src="https://assets.vercel.com/image/upload/v1607554385/repositories/next-js/next-logo.png" height="128">
-    <h1 align="center">HZN Next.JS Boilerplate</h1>
-  </a>
+    <h1 align="center">HZN <a href="https://nextjs.org">Next.JS</a> Boilerplate</h1>
 </p>
 
 <p align="center">
