@@ -23,7 +23,11 @@ const Home = () => {
             <h3>
                 {t("hello")} {t("world")} {t("error")} : {counter}
             </h3>
-            <ButtonExample onClick={onWelcome} gradientColor="blue">
+            <ButtonExample
+                testID="button-example"
+                onClick={onWelcome}
+                gradientColor="blue"
+            >
                 Counter
             </ButtonExample>
         </Container>
