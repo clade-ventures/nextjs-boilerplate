@@ -110,3 +110,4 @@ Recommended Visual Studio Extensions:
 -   Functional component should be exported with `React.memo` to prevent a useless rendering
 -   the interface should exist in a functional component to register incoming props.
 -   Every component should have snapshot testing
+-   Every new component shoud have property data-testid with prefix typescript validation, example: `data-testid=button-login`
