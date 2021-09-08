@@ -17,8 +17,6 @@
   </a>
 </p>
 
-## HZN Next JS Boilerplate
-
 This structure based on [next-boilerplate](https://github.com/pankod/next-boilerplate).
 <br/>
 Enhancements:
