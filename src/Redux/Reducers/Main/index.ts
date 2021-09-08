@@ -5,17 +5,15 @@ const INITIAL_STATE: IMain.IStateProps = {
     token: "",
 };
 
-type IPayload = IMain.Actions.IPayload;
-
 export const CounterReducer = (
     state = INITIAL_STATE,
-    action: IAction<IPayload>
+    { type, payload }: IAction<IMain.Actions.IPayload>
 ) => {
-    switch (action.type) {
+    switch (type) {
         case ActionConsts.Main.SetLoginDataReducer:
             return {
                 ...state,
-                token: action?.payload?.token,
+                token: payload?.token ?? "",
             };
         case ActionConsts.Main.ResetLoginDataReducer:
             return INITIAL_STATE;
