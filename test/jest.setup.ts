@@ -1,7 +1,6 @@
 import nock from "nock";
 import dotenv from "dotenv";
 import "@testing-library/jest-dom";
-// #endregion Global Imports
 
 dotenv.config({ path: ".env.test" });
 
