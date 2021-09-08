@@ -20,8 +20,11 @@ const Home = () => {
     return (
         <Container>
             <h1>HZN Frontend Structure</h1>
-            <ButtonExample onClick={onWelcome} gradientColor="blue">
+            <h3>
                 {t("hello")} {t("world")} {t("error")} : {counter}
+            </h3>
+            <ButtonExample onClick={onWelcome} gradientColor="blue">
+                Counter
             </ButtonExample>
         </Container>
     );
