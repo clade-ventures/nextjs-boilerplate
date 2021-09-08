@@ -18,10 +18,11 @@ const useStyles = makeStyles({
 });
 
 export const ButtonExample = memo((props: IButton) => {
-    const { gradientColor, ...materialUIProps } = props;
+    const { testID, gradientColor, ...materialUIProps } = props;
     const classes = useStyles({ gradientColor });
     return (
         <Button
+            data-testid={testID}
             className={gradientColor ? classes.gradientColor : ""}
             {...materialUIProps}
         />
