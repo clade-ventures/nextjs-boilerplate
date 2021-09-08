@@ -20,11 +20,7 @@ const Home = () => {
     return (
         <Container>
             <h1>HZN Frontend Structure</h1>
-            <ButtonExample
-                variant="contained"
-                color="primary"
-                onClick={onWelcome}
-            >
+            <ButtonExample onClick={onWelcome} gradientColor="blue">
                 {t("hello")} {t("world")} {t("error")} : {counter}
             </ButtonExample>
         </Container>
