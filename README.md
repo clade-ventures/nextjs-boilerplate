@@ -24,8 +24,10 @@ Enhancements:
 -   Added Atomic design structure (Atoms, Molecules, etc.).
 -   Added Next JS internationalization.
 -   Added Redux Persist.
+-   Added Redux Toolkit
 -   Added Modules in Interfaces directory `Interfaces/Modules`.
 -   Added Internationalization config by NextJS Internationalization and `next-i18next`, currently support [en, id]. example `http://localhost/id` or `http://localhost/en`. The default value is en.
+-   Added form management with `react-hook-form` and `yup` library.
 -   Moved `_app/index.tsx`, `_document/index.tsx`, `_error/index.tsx`, `404/index.tsx` from folder to `_app.tsx`.
 -   Updated all library to latest update (Next.JS v9 to v11, storybook, redux, etc).
 -   Updated definition structure in service layer from multiple definition to single definition, example: `Auth.d.ts`.
@@ -47,21 +49,25 @@ This boilerplate makes it easier to get up and running with a well-structured Ne
 
 this project provides a lot of features out of the box. Here's an overview of the included components and tools.
 
--   **Next.js** - Minimalistic framework for server-rendered React applications.
--   **Typescript** - Superset of JavaScript which primarily provides optional static typing, classes and interfaces.
--   **Redux** - A predictable state container for JavaScript apps with Redux Thunk and Redux Persist.
--   **Material UI** - React components for faster and easier web development.
--   **Docker** - A tool designed to make it easier to create, deploy, and run applications by using containers.
--   **Babel** - The compiler for next generation JavaScript.
--   **ESLint** - The pluggable linting utility.
--   **Bundler Analyzer** - Visualize the size of webpack output files with an interactive zoomable treemap.
--   **Jest** - Javascript testing framework , created by developers who created React.
--   **React Testing Library** - Simple and complete React DOM testing utilities that encourage good testing practices.
--   **Cypress** - Javascript automation testing framework.
--   **next-runtime-dotenv** - Expose environment variables to the runtime config of Next.js
--   **next-i18next** - An internationalization-framework which provides a function that takes a key, some options, and returns the value for the current language. Helps you to add language translation support to your app.
--   **Storybook** - An open source tool for developing UI components in isolation for React.
-    <br/>
+| Name                      | Description                                                                                     |
+| ------------------------- | ----------------------------------------------------------------------------------------------- |
+| Next JS                   | Minimalistic framework for server-rendered React applications.                                  |
+| Typescript                | Superset of JavaScript which primarily provides optional static typing, classes and interfaces. |
+| Redux                     | A predictable state container for JavaScript apps with Redux Thunk and Redux Persist.           |
+| Material UI               | React components for faster and easier web development.                                         |
+| Docker                    | A tool designed to make it easier to create, deploy, and run applications by using containers.  |
+| Babel                     | The compiler for next generation JavaScript.                                                    |
+| ESLint                    | The pluggable linting utility.                                                                  |
+| Bundler Analyzer          | Visualize the size of webpack output files with an interactive zoomable treemap.                |
+| Jest                      | Javascript testing framework , created by developers who created React.                         |
+| React Testing Library     | Simple and complete React DOM testing utilities that encourage good testing practices.          |
+| Cypress                   | Javascript automation testing framework.                                                        |
+| next-runtime-dotenv       | Expose environment variables to the runtime config of Next.js                                   |
+| next-i18next              | An internationalization-framework which returns the value for the current language.             |
+| Next Internationalization | Supporting internationalization in next route                                                   |
+| Storybook                 | An open source tool for developing UI components in isolation for React.                        |
+| React Hook Form & Yup     | Form management                                                                                 |
+| Redux Toolkit             | The official, opinionated, batteries-included toolset for efficient Redux development           |
 
 ## Setup and Usages
 
@@ -69,13 +75,16 @@ Run this script `npm install` or `yarn install` and then to run this project `np
 
 This project provides somes scripts:
 
--   **npm run start** - Running this project in production environment.
--   **npm run start:dev** - Running this project in development environment.
--   **npm run start:doc** - Running this project as component documentation.
--   **npm run test:unit** - Running unit testing with Jest.
--   **npm run test:e2e** - Running end to end testing with Cypress.
--   **npm run start:analyze** - Analyzing existing bundle by bundle size visualization in the terminal.
-    <br/>
+| Script                | Description                                                             |
+| --------------------- | ----------------------------------------------------------------------- |
+| npm run start         | Running this project in production environment.                         |
+| npm run start:dev     | Running this project in development environment.                        |
+| npm run start:doc     | Running this project as component documentation.                        |
+| npm run start:analyze | Analyzing existing bundle by bundle size visualization in the terminal. |
+| npm run test:unit     | Running unit testing with Jest.                                         |
+| npm run test:e2e      | Running end to end testing with Cypress.                                |
+
+<br/>
 
 Recommended Visual Studio Extensions:
 
