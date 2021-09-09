@@ -22,8 +22,7 @@ Enhancements:
 -   Added Material UI and removed Styled Component.
 -   Added Cypress as e2e testing framework.
 -   Added Atomic design structure (Atoms, Molecules, etc.).
--   Added Next JS internationalization.
--   Added Redux Toolkit and Redux Persist.
+-   Added Redux Toolkit (createSlice, createApi / RTK Query) and Redux Persist.
 -   Added Internationalization config by NextJS Internationalization and `next-i18next`, currently support [en, id]. example `http://localhost/id` or `http://localhost/en`. The default value is en.
 -   Added form management with `react-hook-form` and `yup` library.
 -   Moved `_app/index.tsx`, `_document/index.tsx`, `_error/index.tsx`, `404/index.tsx` from folder to `_app.tsx`.
@@ -105,13 +104,23 @@ Recommended Visual Studio Extensions:
 
 ## Folder Structure
 
-| Folder             | Description                    |
-| ------------------ | ------------------------------ |
-| .storybook         | Storybook configuration        |
-| coverage           | Jest coverage result           |
-| cypress            | End to end testing folder      |
-| test/jest.setup.ts | Jest setup before the test run |
-| ...                | ...                            |
+| Folder                              | Description                                      |
+| ----------------------------------- | ------------------------------------------------ |
+| .storybook                          | Storybook configuration                          |
+| coverage                            | Jest coverage result                             |
+| cypress                             | End to end testing folder                        |
+| test/jest.setup.ts                  | Jest setup before the test run                   |
+| src/components                      | Atomic design folder structure                   |
+| src/definitions                     | Constants                                        |
+| src/interface                       | Interfaces                                       |
+| src/redux/store.ts                  | Redux store setup                                |
+| src/modules                         | Redux modules                                    |
+| src/modules/index.ts                | Exporting combine reducer and middleware         |
+| src/modules/{name}/index.ts         | Exporting all export file in this folder         |
+| src/modules/{name}/{name}.consts.ts | Redux Module Constants for reducer path and name |
+| src/modules/{name}/{name}.d.ts      | Redux Module interfaces                          |
+| src/modules/{name}/{name}.query.ts  | Redux Module RTK Query                           |
+| src/modules/{name}/{name}.slice.ts  | Redux Module RTK Slice / Reducer                 |
 
 ## Rules
 
