@@ -1,55 +1,63 @@
-import { createStore, applyMiddleware, AnyAction } from "redux";
-import thunkMiddleware from "redux-thunk";
-import { createWrapper, HYDRATE } from "next-redux-wrapper";
+import {
+    persistStore,
+    persistReducer,
+    FLUSH,
+    REHYDRATE,
+    PAUSE,
+    PERSIST,
+    PURGE,
+    REGISTER,
+} from "redux-persist";
+import storage from "redux-persist/lib/storage";
+import { configureStore } from "@reduxjs/toolkit";
+import { createWrapper } from "next-redux-wrapper";
 
-import combinedReducer from "./Reducers";
+import { combinedReducer, combinedMiddleware } from "./Modules";
 
-const reducer = (state: any, action: AnyAction) => {
-    switch (action.type) {
-        case HYDRATE:
-            // Attention! This will overwrite client state! Real apps should use proper reconciliation.
-            return { ...state, ...action.payload };
-        default:
-            return combinedReducer(state, action);
+export const makeStore = ({ isServer }: any) => {
+    if (typeof isServer == "undefined") {
+        isServer = typeof window === "undefined";
     }
-};
-
-const bindMiddleware = (middleware: any) => {
-    if (process.env.NODE_ENV !== "production") {
-        const { composeWithDevTools } = require("redux-devtools-extension");
-        return composeWithDevTools(applyMiddleware(...middleware));
-    }
-    return applyMiddleware(...middleware);
-};
-
-const makeStore = () => {
-    const isServer = typeof window === "undefined";
 
     if (isServer) {
         //If it's on server side, create a store
-        return createStore(reducer, bindMiddleware([thunkMiddleware]));
+        return configureStore({
+            reducer: combinedReducer,
+        });
     } else {
         //If it's on client side, create a store which will persist
-        const { persistStore, persistReducer } = require("redux-persist");
-        const storage = require("redux-persist/lib/storage").default;
+        // const storage = storage.default
 
         const persistConfig = {
-            key: "e60bb998ea0252d928b88d940c3e1852fa528e0c5a5510cda3f2c81434b19ab6",
+            key: "root",
+            version: 1,
             whitelist: ["counter"],
             storage,
         };
 
-        const persistedReducer = persistReducer(persistConfig, reducer);
+        const persistedReducer = persistReducer(persistConfig, combinedReducer); // Create a new reducer with our existing reducer
 
-        const store: any = createStore(
-            persistedReducer,
-            bindMiddleware([thunkMiddleware])
-        );
+        const store: any = configureStore({
+            reducer: persistedReducer,
+            middleware: (getDefaultMiddleware: any) =>
+                getDefaultMiddleware({
+                    serializableCheck: {
+                        ignoredActions: [
+                            FLUSH,
+                            REHYDRATE,
+                            PAUSE,
+                            PERSIST,
+                            PURGE,
+                            REGISTER,
+                        ],
+                    },
+                }).concat(combinedMiddleware),
+        });
 
-        store.__persistor = persistStore(store);
+        store.__persistor = persistStore(store); // This creates a persistor object & push that persisted object to .__persistor, so that we can avail the persistability feature
 
         return store;
     }
 };
 
-export const wrapper = createWrapper(makeStore);
+export const wrapper = createWrapper<any>(makeStore);

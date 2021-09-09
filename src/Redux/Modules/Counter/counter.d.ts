@@ -1,7 +1,7 @@
 declare namespace ICounter {
     export interface IProps {}
 
-    export interface IStateProps {
+    export interface IInitialState {
         countNumber: number;
     }
 
@@ -18,4 +18,4 @@ declare namespace ICounter {
     }
 }
 
-export { ICounter };
+export default ICounter;

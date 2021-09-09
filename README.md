@@ -23,9 +23,7 @@ Enhancements:
 -   Added Cypress as e2e testing framework.
 -   Added Atomic design structure (Atoms, Molecules, etc.).
 -   Added Next JS internationalization.
--   Added Redux Persist.
--   Added Redux Toolkit
--   Added Modules in Interfaces directory `Interfaces/Modules`.
+-   Added Redux Toolkit and Redux Persist.
 -   Added Internationalization config by NextJS Internationalization and `next-i18next`, currently support [en, id]. example `http://localhost/id` or `http://localhost/en`. The default value is en.
 -   Added form management with `react-hook-form` and `yup` library.
 -   Moved `_app/index.tsx`, `_document/index.tsx`, `_error/index.tsx`, `404/index.tsx` from folder to `_app.tsx`.

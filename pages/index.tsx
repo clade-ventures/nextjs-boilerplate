@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { ButtonExample } from "@Atoms";
 
-import { CounterActions } from "@Actions";
+import { counterSlice } from "@ReduxModules/Counter";
 
 const Home = () => {
     const { t } = useTranslation();
@@ -14,7 +14,7 @@ const Home = () => {
     const counter = useSelector((state: any) => state.counter?.countNumber);
 
     const onWelcome = useCallback(() => {
-        dispatch(CounterActions.Increment());
+        dispatch(counterSlice.actions.increment());
     }, [dispatch]);
 
     return (
