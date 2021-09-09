@@ -104,23 +104,23 @@ Recommended Visual Studio Extensions:
 
 ## Folder Structure
 
-| Folder                              | Description                                      |
-| ----------------------------------- | ------------------------------------------------ |
-| .storybook                          | Storybook configuration                          |
-| coverage                            | Jest coverage result                             |
-| cypress                             | End to end testing folder                        |
-| test/jest.setup.ts                  | Jest setup before the test run                   |
-| src/components                      | Atomic design folder structure                   |
-| src/definitions                     | Constants                                        |
-| src/interface                       | Interfaces                                       |
-| src/redux/store.ts                  | Redux store setup                                |
-| src/modules                         | Redux modules                                    |
-| src/modules/index.ts                | Exporting combine reducer and middleware         |
-| src/modules/{name}/index.ts         | Exporting all export file in this folder         |
-| src/modules/{name}/{name}.consts.ts | Redux Module Constants for reducer path and name |
-| src/modules/{name}/{name}.d.ts      | Redux Module interfaces                          |
-| src/modules/{name}/{name}.query.ts  | Redux Module RTK Query                           |
-| src/modules/{name}/{name}.slice.ts  | Redux Module RTK Slice / Reducer                 |
+| Folder                                    | Description                                      |
+| ----------------------------------------- | ------------------------------------------------ |
+| .storybook                                | Storybook configuration                          |
+| coverage                                  | Jest coverage result                             |
+| cypress                                   | End to end testing folder                        |
+| test/jest.setup.ts                        | Jest setup before the test run                   |
+| src/components                            | Atomic design folder structure                   |
+| src/definitions                           | Constants                                        |
+| src/interface                             | Interfaces                                       |
+| src/redux/store.ts                        | Redux store setup                                |
+| src/redux/modules                         | Redux modules                                    |
+| src/redux/modules/index.ts                | Exporting combine reducer and middleware         |
+| src/redux/modules/{name}/index.ts         | Exporting all export file in this folder         |
+| src/redux/modules/{name}/{name}.consts.ts | Redux Module Constants for reducer path and name |
+| src/redux/modules/{name}/{name}.d.ts      | Redux Module interfaces                          |
+| src/redux/modules/{name}/{name}.query.ts  | Redux Module RTK Query                           |
+| src/redux/modules/{name}/{name}.slice.ts  | Redux Module RTK Slice / Reducer                 |
 
 ## Rules
 
