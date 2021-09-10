@@ -18,7 +18,8 @@
                     "@Pages": "./pages",
                     "@Redux": "./src/Redux",
                     "@ReduxModules": "./src/Redux/Modules",
-                    "@Static": "./public/static"
+                    "@Static": "./public/static",
+                    "@src": "./src"
                 }
             }
         ]

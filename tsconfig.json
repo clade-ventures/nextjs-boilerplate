@@ -47,7 +47,11 @@
         "src/Redux/Modules/*"
       ],
       "@Static/*": ["public/static/*"],
-      "@Test/*": ["test/*"]
+      "@Test/*": ["test/*"],
+      "@src": ["./src"],
+      "@src/*": [
+        "./src/*"
+      ],
     }
   },
   "exclude": [
