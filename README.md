@@ -128,7 +128,7 @@ Recommended Visual Studio Extensions:
 
 ### Generals
 
--   The import should with aliash path (dont use like `../../`, `../src/Redux`, etc), here is available alias path
+-   The import local component/library should be with alias path (use `@ReduxModules/Counter` instead of `../src/Redux/Modules/Counter`), here is available alias path:
     | Alias Path | Description |
     | --------------------- | ----------------------------------------------------------------------- |
     | @Atoms | To access atoms directory which inside component |
