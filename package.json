@@ -1,8 +1,8 @@
 {
-  "name": "@hzn-one/nextjs-boilerplate",
-  "description": "A well-structured production ready Next.js boilerplate with Typescript, Redux, Jest, React Testing Library, Cypress, EnvConfig, Fetch, Bundle Analyzer. https://github.com/HZN-one/nextjs-boilerplate",
+  "name": "@clade-ventures/nextjs-boilerplate",
+  "description": "A well-structured production ready Next.js boilerplate with Typescript, Redux, Jest, React Testing Library, Cypress, EnvConfig, Fetch, Bundle Analyzer. https://github.com/clade-ventures/nextjs-boilerplate",
   "version": "1.0.0",
-  "repository": "https://github.com/HZN-one/nextjs-boilerplate",
+  "repository": "https://github.com/clade-ventures/nextjs-boilerplate",
   "author": "HZN Engineer",
   "scripts": {
     "build": "next build",
