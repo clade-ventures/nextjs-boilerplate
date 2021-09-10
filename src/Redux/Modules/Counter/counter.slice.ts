@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { reducerName } from "../User/user.const";
 
-import ICounter from "./counter";
+import { IReduxCounter } from "@Interfaces";
 
-export const initialState: ICounter.IInitialState = {
+const reducerName = "counter";
+
+export const initialState: IReduxCounter.IInitialState = {
     countNumber: 0,
 };
 
@@ -24,3 +25,4 @@ export const counterSlice = createSlice({
 });
 
 export const { increment, decrement, reset } = counterSlice.actions;
+export const counterSliceReducer = { [reducerName]: counterSlice.reducer };

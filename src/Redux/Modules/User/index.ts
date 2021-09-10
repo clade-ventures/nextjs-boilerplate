@@ -1,12 +1,11 @@
-import { userAPI, userSlice } from ".";
-import { reducerName, reducerPath } from "./user.const";
+import { userQueryReducer } from "./user.query";
+import { userSliceReducer } from "./user.slice";
+
+const combinedReducer = {
+    ...userQueryReducer,
+    ...userSliceReducer,
+};
 
 export * from "./user.query";
 export * from "./user.slice";
-
-const reducer = {
-    [reducerName]: userAPI.reducer,
-    [reducerPath]: userSlice.reducer,
-};
-
-export default reducer;
+export default combinedReducer;

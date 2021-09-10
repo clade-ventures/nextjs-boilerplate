@@ -1,17 +1,19 @@
 import { useCallback } from "react";
 import { Container } from "@material-ui/core";
 import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useDispatch, useSelector } from "react-redux";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { ButtonExample } from "@Atoms";
 
 import { counterSlice } from "@ReduxModules/Counter";
+import { useGetUsersQuery } from "@ReduxModules/User";
 
 const Home = () => {
     const { t } = useTranslation();
     const dispatch = useDispatch();
     const counter = useSelector((state: any) => state.counter?.countNumber);
+    const { isLoading, data } = useGetUsersQuery({});
 
     const onWelcome = useCallback(() => {
         dispatch(counterSlice.actions.increment());
@@ -30,6 +32,12 @@ const Home = () => {
             >
                 Counter
             </ButtonExample>
+            <h3>Users RTK Query</h3>
+            {isLoading ? (
+                <div>Loading</div>
+            ) : (
+                data?.data?.map(row => <div key={row.email}>{row.email}</div>)
+            )}
         </Container>
     );
 };

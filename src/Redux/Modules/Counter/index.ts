@@ -1,10 +1,8 @@
-import { counterSlice } from ".";
-import { reducerName } from "./counter.const";
+import { counterSliceReducer } from "./counter.slice";
 
-export * from "./counter.slice";
-
-const reducer = {
-    [reducerName]: counterSlice.reducer,
+const combinedReducer = {
+    ...counterSliceReducer,
 };
 
-export default reducer;
+export * from "./counter.slice";
+export default combinedReducer;

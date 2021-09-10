@@ -1,16 +1,18 @@
 import { makeStore } from "@Redux";
+
 import { counterSlice, initialState } from ".";
-import ICounter from "./counter";
+
+import { IReduxCounter } from "@Interfaces";
 
 describe("Counter slice test", () => {
-    it("Initial State", () => {
+    it("Should return a correct initial state", () => {
         expect(initialState).toEqual({
             countNumber: 0,
-        } as ICounter.IInitialState);
+        } as IReduxCounter.IInitialState);
     });
 
-    it("Increment", () => {
-        const store = makeStore({ isServer: false });
+    it("Should increment a count number", () => {
+        const store = makeStore({ isServer: true });
         let currentCountNumber = store.getState().counter.countNumber;
         const expectedCountNumber = currentCountNumber + 1;
 
@@ -19,8 +21,8 @@ describe("Counter slice test", () => {
         expect(currentCountNumber).toBe(expectedCountNumber);
     });
 
-    it("Decrement and Reset", () => {
-        const store = makeStore({ isServer: false });
+    it("Should decrement and reset a count number ", () => {
+        const store = makeStore({ isServer: true });
         let currentCountNumber = store.getState().counter.countNumber;
         const expectedCountNumber = currentCountNumber - 1;
 

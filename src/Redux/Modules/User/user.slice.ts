@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import IReduxUser from "./user";
-import { userAPI } from ".";
-import { reducerName } from "./user.const";
+import { IReduxUser } from "@Interfaces";
+import { userAPI } from "./user.query";
 
+const reducerName = "user";
 export const initialState: IReduxUser.IInitialState = {
-    latestCreatedUser: {},
+    duplicateUsers: [],
 };
 
 export const userSlice = createSlice({
@@ -14,10 +14,12 @@ export const userSlice = createSlice({
     reducers: {},
     extraReducers: builder => {
         builder.addMatcher(
-            userAPI.endpoints.createUser.matchFulfilled,
+            userAPI.endpoints.getUsers.matchFulfilled,
             (state, { payload }: any) => {
-                state.latestCreatedUser = payload;
+                state.duplicateUsers = payload;
             }
         );
     },
 });
+
+export const userSliceReducer = { [reducerName]: userSlice.reducer };

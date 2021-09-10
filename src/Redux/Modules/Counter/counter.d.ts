@@ -1,4 +1,4 @@
-declare namespace ICounter {
+declare namespace IReduxCounter {
     export interface IProps {}
 
     export interface IInitialState {
@@ -18,4 +18,4 @@ declare namespace ICounter {
     }
 }
 
-export default ICounter;
+export { IReduxCounter };

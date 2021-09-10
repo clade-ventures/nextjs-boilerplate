@@ -1,4 +1,4 @@
-import { combineReducers } from "redux";
+import { combineReducers } from "@reduxjs/toolkit";
 import userReducer, { userAPI } from "./User";
 import counterReducer from "./Counter";
 
@@ -7,4 +7,4 @@ export const combinedReducer = combineReducers({
     ...counterReducer,
 });
 
-export const combinedMiddleware = [userAPI.middleware];
+export const combinedMiddleware = userAPI.middleware;

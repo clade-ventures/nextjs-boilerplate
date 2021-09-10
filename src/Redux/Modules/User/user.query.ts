@@ -1,31 +1,28 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { reducerPath } from "./user.const";
+import { createApi } from "@reduxjs/toolkit/query/react";
 
+import { IReduxUser } from "./user";
+import http from "@src/Http";
+
+const reducerPath = "userApi";
 export const userAPI = createApi({
     reducerPath,
-    baseQuery: fetchBaseQuery({
-        baseUrl: process.env.NEXT_PUBLIC_API_URL,
-        prepareHeaders: (headers, { getState }: any) => {
-            const token: any = getState()?.auth?.token;
-
-            if (token) {
-                headers.set("authorization", `Bearer ${token}`);
-            }
-
-            return headers;
-        },
-    }),
+    baseQuery: http(),
     endpoints: builder => ({
         getUsers: builder.query({
-            query: () => `users`,
-            transformResponse: (response: any) => response?.data,
+            query: () => ({
+                url: `/users`,
+                method: "GET",
+            }),
+            transformResponse: (
+                response: IReduxUser.IUsersResponse
+            ): IReduxUser.IUsersResponse => response,
         }),
         getUserByID: builder.query({
-            query: id => `users/${id}`,
+            query: (id: { id: number }) => `users/${id}`,
         }),
         createUser: builder.mutation({
-            query: body => ({
-                url: `users`,
+            query: (body: IReduxUser.ICreateUserPayload) => ({
+                url: `/users`,
                 method: "POST",
                 body,
             }),
@@ -34,3 +31,4 @@ export const userAPI = createApi({
 });
 
 export const { useGetUsersQuery, useGetUserByIDQuery } = userAPI;
+export const userQueryReducer = { [reducerPath]: userAPI.reducer };
