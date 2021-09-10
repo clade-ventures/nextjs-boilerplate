@@ -128,12 +128,27 @@ Recommended Visual Studio Extensions:
 
 ### Generals
 
+-   The import should with aliash path (dont use like `../../`, `../src/Redux`, etc), here is available alias path
+    | Alias Path | Description |
+    | --------------------- | ----------------------------------------------------------------------- |
+    | @Atoms | To access atoms directory which inside component |
+    | @Molecules | To access molecules directory inside component |
+    | @Organisms | To access organisms directory inside component |
+    | @Definitions | To access definitions directory inside src |
+    | @Interfaces | To access interfaces directory inside src |
+    | @Pages | To access pages directory |
+    | @Redux | To access redux directory |
+    | @ReduxModules | To access redux/modules directory |
+    | @Static | To access public/static directory |
+
 -   The imported library should be pyramid sorted and also grouped by:
-    1. External library
-    2. Component
-    3. Redux
-    4. Util/Helper
-    5. Interface
+    | Order Number | Import Area Description |
+    | --------------------- | ----------------------------------------------------------------------- |
+    | 1 | Import external library here |
+    | 2 | Import local component here |
+    | 3 | Import redux family here |
+    | 4 | Import util/helper/etc function here |
+    | 5 | Import Interface here |
 
 ### Components
 
