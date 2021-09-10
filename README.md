@@ -1,6 +1,8 @@
 <p align="center">
     <img src="https://assets.vercel.com/image/upload/v1607554385/repositories/next-js/next-logo.png" height="128">
-    <h1 align="center">HZN <a href="https://nextjs.org">Next.JS</a> Boilerplate</h1>
+    <img src="https://image.flaticon.com/icons/png/512/919/919832.png" height="128">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgWLBe-VaJIYEbmTPrm1XyFy35MInioRpbpKK48hmPbj-m8TCYEG_GSIUZZIpXNuTqG-U&usqp=CAU" height="128">
+    <h1 align="center">HZN <a href="https://nextjs.org">Next.JS</a> Boilerplate with Typescript and Redux Toolkit</h1>
 </p>
 
 <p align="center">
@@ -15,7 +17,7 @@
   </a>
 </p>
 
-This structure based on [next-boilerplate](https://github.com/pankod/next-boilerplate).
+A Next.JS Boilerplate in Typescript syntax with important libraries. This structure based on [next-boilerplate](https://github.com/pankod/next-boilerplate).
 <br/>
 Enhancements:
 
@@ -23,7 +25,7 @@ Enhancements:
 -   Added Cypress as e2e testing framework.
 -   Added Atomic design structure (Atoms, Molecules, etc.).
 -   Added Redux Toolkit (createSlice, createApi / RTK Query) and Redux Persist.
--   Added Internationalization config by NextJS Internationalization and `next-i18next`, currently support [en, id]. example `http://localhost/id` or `http://localhost/en`. The default value is en.
+-   Added Internationalization config by Next.JS Internationalization and `next-i18next`, currently support [en, id]. example `http://localhost/id` or `http://localhost/en`. The default value is en.
 -   Added form management with `react-hook-form` and `yup` library.
 -   Moved `_app/index.tsx`, `_document/index.tsx`, `_error/index.tsx`, `404/index.tsx` from folder to `_app.tsx`.
 -   Updated all library to latest update (Next.JS v9 to v11, storybook, redux, etc).
@@ -48,9 +50,12 @@ this project provides a lot of features out of the box. Here's an overview of th
 
 | Name                      | Description                                                                                     |
 | ------------------------- | ----------------------------------------------------------------------------------------------- |
-| Next JS                   | Minimalistic framework for server-rendered React applications.                                  |
+| Next.JS                   | Minimalistic framework for server-rendered React applications.                                  |
+| Storybook                 | An open source tool for developing UI components in isolation for React.                        |
 | Typescript                | Superset of JavaScript which primarily provides optional static typing, classes and interfaces. |
 | Redux                     | A predictable state container for JavaScript apps with Redux Thunk and Redux Persist.           |
+| Redux Toolkit             | The official, opinionated, batteries-included toolset for efficient Redux development           |
+| React Hook Form & Yup     | Form management                                                                                 |
 | Material UI               | React components for faster and easier web development.                                         |
 | Docker                    | A tool designed to make it easier to create, deploy, and run applications by using containers.  |
 | Babel                     | The compiler for next generation JavaScript.                                                    |
@@ -62,9 +67,6 @@ this project provides a lot of features out of the box. Here's an overview of th
 | next-runtime-dotenv       | Expose environment variables to the runtime config of Next.js                                   |
 | next-i18next              | An internationalization-framework which returns the value for the current language.             |
 | Next Internationalization | Supporting internationalization in next route                                                   |
-| Storybook                 | An open source tool for developing UI components in isolation for React.                        |
-| React Hook Form & Yup     | Form management                                                                                 |
-| Redux Toolkit             | The official, opinionated, batteries-included toolset for efficient Redux development           |
 
 ## Setup and Usages
 
