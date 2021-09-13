@@ -2,8 +2,8 @@ import { userQueryReducer } from "./user.query";
 import { userSliceReducer } from "./user.slice";
 
 const combinedReducer = {
-    ...userQueryReducer,
-    ...userSliceReducer,
+  ...userQueryReducer,
+  ...userSliceReducer,
 };
 
 export * from "./user.query";

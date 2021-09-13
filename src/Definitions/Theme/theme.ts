@@ -3,23 +3,23 @@ import { red } from "@material-ui/core/colors";
 
 // Create a theme instance.
 const theme = createTheme({
-    typography: {
-        fontFamily: "Roboto, arial, calibri",
+  typography: {
+    fontFamily: "Roboto, arial, calibri",
+  },
+  palette: {
+    primary: {
+      main: "#556cd6",
     },
-    palette: {
-        primary: {
-            main: "#556cd6",
-        },
-        secondary: {
-            main: "#19857b",
-        },
-        error: {
-            main: red.A400,
-        },
-        background: {
-            default: "#fff",
-        },
+    secondary: {
+      main: "#19857b",
     },
+    error: {
+      main: red.A400,
+    },
+    background: {
+      default: "#fff",
+    },
+  },
 });
 
 export default theme;

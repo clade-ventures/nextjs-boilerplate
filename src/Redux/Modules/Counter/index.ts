@@ -1,7 +1,7 @@
 import { counterSliceReducer } from "./counter.slice";
 
 const combinedReducer = {
-    ...counterSliceReducer,
+  ...counterSliceReducer,
 };
 
 export * from "./counter.slice";
