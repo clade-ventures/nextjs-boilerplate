@@ -1,6 +1,8 @@
 import * as React from "react";
 import { appWithTranslation } from "next-i18next";
 import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
+import AdapterDateFns from "@mui/lab/AdapterDateFns";
+import LocalizationProvider from "@mui/lab/LocalizationProvider";
 
 import { wrapper } from "@Redux";
 
@@ -10,7 +12,9 @@ const App = ({ Component, pageProps }: any) => {
   return (
     <ThemeProvider theme={theme}>
       <StyledEngineProvider injectFirst>
-        <Component {...pageProps} />
+        <LocalizationProvider dateAdapter={AdapterDateFns}>
+          <Component {...pageProps} />
+        </LocalizationProvider>
       </StyledEngineProvider>
     </ThemeProvider>
   );

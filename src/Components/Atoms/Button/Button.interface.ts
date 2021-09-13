@@ -1,4 +1,4 @@
-import { ButtonProps } from "@material-ui/core/Button";
+import { ButtonProps } from "@mui/material/Button";
 
 export default interface IButton extends ButtonProps {
   gradientColor?: "red" | "blue";
