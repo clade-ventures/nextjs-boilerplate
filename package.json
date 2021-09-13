@@ -20,7 +20,7 @@
     "build-storybook": "build-storybook -s ./public/static  -c .storybook -o .storybookout"
   },
   "dependencies": {
-    "@material-ui/core": "^5.0.0-beta.5",
+    "@material-ui/core": "^4.12.3",
     "@next/bundle-analyzer": "^11.1.2",
     "@reduxjs/toolkit": "^1.6.1",
     "autoprefixer": "^10.3.4",
