@@ -22,18 +22,18 @@ A Next.JS Boilerplate in Typescript syntax with important libraries. This struct
 <br/>
 Enhancements:
 
--   Added Material UI and removed Styled Component.
--   Added Cypress as e2e testing framework.
--   Added Atomic design structure (Atoms, Molecules, etc.).
--   Added Redux Toolkit (createSlice, createApi / RTK Query) and Redux Persist.
--   Added Internationalization config by Next.JS Internationalization and `next-i18next`, currently support [en, id]. example `http://localhost/id` or `http://localhost/en`. The default value is en.
--   Added form management with `react-hook-form` and `yup` library.
--   Moved `_app/index.tsx`, `_document/index.tsx`, `_error/index.tsx`, `404/index.tsx` from folder to `_app.tsx`.
--   Updated all library to latest update (Next.JS v9 to v11, storybook, redux, etc).
--   Updated definition structure in service layer from multiple definition to single definition, example: `Auth.d.ts`.
--   Updated bundle analyzer setup to the latest way.
--   Removed Express JS.
--   Removed CLI Pankod.
+- Added Material UI and removed Styled Component.
+- Added Cypress as e2e testing framework.
+- Added Atomic design structure (Atoms, Molecules, etc.).
+- Added Redux Toolkit (createSlice, createApi / RTK Query) and Redux Persist.
+- Added Internationalization config by Next.JS Internationalization and `next-i18next`, currently support [en, id]. example `http://localhost/id` or `http://localhost/en`. The default value is en.
+- Added form management with `react-hook-form` and `yup` library.
+- Moved `_app/index.tsx`, `_document/index.tsx`, `_error/index.tsx`, `404/index.tsx` from folder to `_app.tsx`.
+- Updated all library to latest update (Next.JS v9 to v11, storybook, redux, etc).
+- Updated definition structure in service layer from multiple definition to single definition, example: `Auth.d.ts`.
+- Updated bundle analyzer setup to the latest way.
+- Removed Express JS.
+- Removed CLI Pankod.
 
 ## About
 
@@ -69,6 +69,13 @@ this project provides a lot of features out of the box. Here's an overview of th
 | next-i18next              | An internationalization-framework which returns the value for the current language.             |
 | Next Internationalization | Supporting internationalization in next route                                                   |
 
+Branches
+
+| branch name    | Description                                 |
+| -------------- | ------------------------------------------- |
+| main           | Main branch with material UI Stable version |
+| v5-material-ui | Main branch with material UI v5 / @mui      |
+
 ## Setup and Usages
 
 Run this script `npm install` or `yarn install` and then to run this project `npm run start:dev` or `yarn run start:dev`.
@@ -88,15 +95,15 @@ This project provides somes scripts:
 
 Recommended Visual Studio Extensions:
 
--   Jest
--   Jest Snippets
--   GitLens - Git supercharge
--   Prettier
--   JavaScript (ES6) code snippets
--   JavaScript and Typescript Nightly
--   ESLint
--   One Dar Pro (theme)
--   Material Icon Theme
+- Jest
+- Jest Snippets
+- GitLens - Git supercharge
+- Prettier
+- JavaScript (ES6) code snippets
+- JavaScript and Typescript Nightly
+- ESLint
+- One Dar Pro (theme)
+- Material Icon Theme
 
 ## Environment
 
@@ -129,34 +136,34 @@ Recommended Visual Studio Extensions:
 
 ### Generals
 
--   The import local component/library should be with alias path (use `@ReduxModules/Counter` instead of `../src/Redux/Modules/Counter`), here is available alias path:
-    | Alias Path | Description |
-    | --------------------- | ----------------------------------------------------------------------- |
-    | @Atoms | To access atoms directory which inside component |
-    | @Molecules | To access molecules directory inside component |
-    | @Organisms | To access organisms directory inside component |
-    | @Definitions | To access definitions directory inside src |
-    | @Interfaces | To access interfaces directory inside src |
-    | @Pages | To access pages directory |
-    | @Redux | To access redux directory |
-    | @ReduxModules | To access redux/modules directory |
-    | @Static | To access public/static directory |
+- The import local component/library should be with alias path (use `@ReduxModules/Counter` instead of `../src/Redux/Modules/Counter`), here is available alias path:
+  | Alias Path | Description |
+  | --------------------- | ----------------------------------------------------------------------- |
+  | @Atoms | To access atoms directory which inside component |
+  | @Molecules | To access molecules directory inside component |
+  | @Organisms | To access organisms directory inside component |
+  | @Definitions | To access definitions directory inside src |
+  | @Interfaces | To access interfaces directory inside src |
+  | @Pages | To access pages directory |
+  | @Redux | To access redux directory |
+  | @ReduxModules | To access redux/modules directory |
+  | @Static | To access public/static directory |
 
--   The imported library should be pyramid sorted and also grouped by:
-    | Order Number | Import Area Description |
-    | --------------------- | ----------------------------------------------------------------------- |
-    | 1 | Import external library here |
-    | 2 | Import local component here |
-    | 3 | Import redux family here |
-    | 4 | Import util/helper/etc function here |
-    | 5 | Import Interface here |
+- The imported library should be pyramid sorted and also grouped by:
+  | Order Number | Import Area Description |
+  | --------------------- | ----------------------------------------------------------------------- |
+  | 1 | Import external library here |
+  | 2 | Import local component here |
+  | 3 | Import redux family here |
+  | 4 | Import util/helper/etc function here |
+  | 5 | Import Interface here |
 
 ### Components
 
--   Component should be writed in functional component
--   A function in functional component should be wrapped by `useCallback` to prevent a useless instantiation
--   A function has expensive calculation should be wrapped by `useMemo` to prevent a useless calculation
--   Functional component should be exported with `React.memo` to prevent a useless rendering
--   the interface should exist in a functional component to register incoming props.
--   Every component should have snapshot testing
--   Every new component shoud have property data-testid with prefix typescript validation, example: `data-testid=button-login`
+- Component should be writed in functional component
+- A function in functional component should be wrapped by `useCallback` to prevent a useless instantiation
+- A function has expensive calculation should be wrapped by `useMemo` to prevent a useless calculation
+- Functional component should be exported with `React.memo` to prevent a useless rendering
+- the interface should exist in a functional component to register incoming props.
+- Every component should have snapshot testing
+- Every new component shoud have property data-testid with prefix typescript validation, example: `data-testid=button-login`
