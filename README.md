@@ -2,13 +2,14 @@
     <img src="https://assets.vercel.com/image/upload/v1607554385/repositories/next-js/next-logo.png" height="128">
     <img src="https://image.flaticon.com/icons/png/512/919/919832.png" height="128">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgWLBe-VaJIYEbmTPrm1XyFy35MInioRpbpKK48hmPbj-m8TCYEG_GSIUZZIpXNuTqG-U&usqp=CAU" height="128">
-    <h1 align="center">HZN <a href="https://nextjs.org">Next.JS</a> Boilerplate with Typescript and Redux Toolkit</h1>
+    <h1 align="center"><a href="https://nextjs.org">Next.JS</a> Boilerplate with Typescript and Redux Toolkit</h1>
 </p>
 
 <p align="center">
   <a aria-label="Next version" href="https://www.npmjs.com/package/next">
     <img alt="" src="https://img.shields.io/badge/Next%20Version-v11.1.2-brightgreen">
   </a>
+
   <a aria-label="Dev Dependencies: up to date" href="#">
     <img alt="" src="https://img.shields.io/badge/devDependencies-up%20to%20date-brightgreen">
   </a>
