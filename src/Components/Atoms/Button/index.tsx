@@ -1,5 +1,6 @@
 import React, { memo } from "react";
-import { Button, makeStyles } from "@material-ui/core";
+import { Button } from "@mui/material";
+import makeStyles from "@mui/styles/makeStyles";
 
 import IButton, { IStyle } from "./Button.interface";
 

@@ -1,7 +1,6 @@
 import * as React from "react";
 import { appWithTranslation } from "next-i18next";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import { ThemeProvider } from "@material-ui/core/styles";
+import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
 
 import { wrapper } from "@Redux";
 
@@ -10,8 +9,9 @@ import theme from "@Definitions/Theme";
 const App = ({ Component, pageProps }: any) => {
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Component {...pageProps} />
+      <StyledEngineProvider injectFirst>
+        <Component {...pageProps} />
+      </StyledEngineProvider>
     </ThemeProvider>
   );
 };

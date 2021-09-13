@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { Container } from "@material-ui/core";
+import { Container } from "@mui/material";
 import { useTranslation } from "next-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
